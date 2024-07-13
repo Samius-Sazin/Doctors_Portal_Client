@@ -72,7 +72,7 @@ const useFirebase = () => {
             phoneNumber: userData.phoneNumber || "",
         };
 
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://doctors-portal-server-wg85.onrender.com/users`, {
             method: method,
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedUserData)
@@ -93,7 +93,7 @@ const useFirebase = () => {
     useEffect(() => {
         setDashboardLoading(true);
 
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://doctors-portal-server-wg85.onrender.com/users/${user.email}`)
             .then(response => response.json())
             .then(data => {
                 if (data.isAdmin) {
@@ -107,7 +107,7 @@ const useFirebase = () => {
                     }, 10000);
                 }
             })
-    }, [user.email])
+    }, [user.email, isAdmin])
 
     return {
         user,

@@ -26,7 +26,7 @@ function MakeAdmin() {
     const handleSubmit = e => {
         handleOpen();
         
-        fetch(`http://localhost:5000/users/admin`, {
+        fetch(`https://doctors-portal-server-wg85.onrender.com/users/admin`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

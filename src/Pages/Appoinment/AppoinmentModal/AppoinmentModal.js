@@ -56,7 +56,7 @@ function AppoinmentModal({ open, booking, handleBookAppoinmentButtonClose, date,
             date: date?.toLocaleDateString(),
         }
 
-        fetch('http://localhost:5000/appointments', {
+        fetch('https://doctors-portal-server-wg85.onrender.com/appointments', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

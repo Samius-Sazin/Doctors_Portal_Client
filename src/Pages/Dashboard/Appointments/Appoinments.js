@@ -7,7 +7,7 @@ function Appoinments({ appointmentDate }) {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/appointments?patientEmail=${user.email}&date=${appointmentDate?.toLocaleDateString()}`)
+        fetch(`https://doctors-portal-server-wg85.onrender.com/appointments?patientEmail=${user.email}&date=${appointmentDate?.toLocaleDateString()}`)
             .then(response => response.json())
             .then(data => {
                 if (data) {
@@ -35,6 +35,7 @@ function Appoinments({ appointmentDate }) {
                             <TableCell align="center" sx={{ color: "#19d3ae" }}>Action</TableCell>
                         </TableRow>
                     </TableHead>
+                    
                     <TableBody>
                         {appointments.map(appointment => (
                             <TableRow
