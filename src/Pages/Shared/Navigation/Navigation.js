@@ -40,6 +40,7 @@ function Navigation() {
                     </NavLink>
 
 
+                    {/*                     
                     {
                         user?.email
                             ?
@@ -54,7 +55,9 @@ function Navigation() {
                             <NavLink style={{ textDecoration: "none", color: "white" }} to="/login">
                                 <Button color="inherit">Login</Button>
                             </NavLink>
-                    }
+                    } 
+                    */}
+                    
                 </Toolbar>
             </AppBar>
         </Box>
