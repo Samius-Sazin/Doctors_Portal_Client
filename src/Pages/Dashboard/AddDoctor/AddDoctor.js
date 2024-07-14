@@ -11,6 +11,7 @@ function AddDoctor() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [image, setImage] = useState(null);
+    const [upload, setUpload] = useState('Selected Photo');
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
@@ -19,6 +20,11 @@ function AddDoctor() {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const handleImageUpload = e => {
+        setUpload('Selected');
+        setImage(e.target.files[0]);
+    }
 
     const handleSubmit = e => {
         if (!image) {
@@ -61,7 +67,7 @@ function AddDoctor() {
                         variant="contained"
                         component="label"
                         sx={{ color: "white", backgroundColor: "#19d3ae", m: 1 }}
-                    > <PhotoIcon /> Upload File <input onChange={e => setImage(e.target.files[0])} accept='image/*' type="file" hidden /> </Button>
+                    > <PhotoIcon /> {upload} <input onChange={handleImageUpload} accept='image/*' type="file" hidden /> </Button>
                     <Button type='submit' variant='contained' sx={{ color: "white", backgroundColor: "#19d3ae", m: 1 }}>Submit</Button>
                 </form>
             </Box>
