@@ -6,7 +6,7 @@ function Service(props) {
 
   return (
     <Grid item xs={4} sm={4} md={4}>
-      <Card sx={{ minWidth: 275, boxShadow: 0 }}>
+      <Card sx={{ minWidth: 275, boxShadow: 0 }} >
         <CardMedia
           component="img"
           style={{width:"auto", hight:"80px", margin:"0px auto"}}

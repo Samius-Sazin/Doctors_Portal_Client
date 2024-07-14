@@ -7,6 +7,7 @@ import TreatmentBanner from '../TreatmentBanner/TreatmentBanner'
 import Testimonials from '../Testimonials/Testimonials'
 import ContactUs from '../ContactUs/ContactUs'
 import Navigation from '../../Shared/Navigation/Navigation'
+import Docotrs from '../Doctors/Docotrs'
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Banner />
       <Information />
       <Services />
+      <Docotrs />
       <TreatmentBanner />
       <AppoinmentBanner />
       <Testimonials />
