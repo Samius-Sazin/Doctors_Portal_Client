@@ -11,7 +11,7 @@ function AddDoctor() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [image, setImage] = useState(null);
-    const [upload, setUpload] = useState('Selected Photo');
+    const [upload, setUpload] = useState('UPLOAD IMAGE');
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
@@ -22,7 +22,7 @@ function AddDoctor() {
     };
 
     const handleImageUpload = e => {
-        setUpload('Selected');
+        setUpload('IMAGE SELECTED');
         setImage(e.target.files[0]);
     }
 
