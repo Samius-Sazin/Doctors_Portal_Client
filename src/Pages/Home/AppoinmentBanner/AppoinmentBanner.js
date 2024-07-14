@@ -13,13 +13,15 @@ function AppoinmentBanner() {
         <div style={background_image}>
             <Container sx={{ flexGrow: 1, mt: 20 }}>
                 <Grid container spacing={{ xs: 0, md: 2 }}>
-                    <Grid item xs={12} md={6} sx={{ display:"flex", justifyContent:"center", }}>
-                        <img
-                            style={{ width: "600px", marginTop: "-150px" }}
-                            src={doctor}
-                            alt="doctor" />
+                    <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center", }}>
+                        <Box sx={{width:{xl:"300", sm:"450px", md:"600px"}, marginTop: "-150px"}}>
+                            <img
+                                style={{ width: "100%" }}
+                                src={doctor}
+                                alt="doctor" />
+                        </Box>
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{ display: "flex", alignItems: "center", textAlign:"left", px: '26px', py: '10px' }}>
+                    <Grid item xs={12} md={6} sx={{ display: "flex", alignItems: "center", textAlign: "left", px: '26px', py: '10px' }}>
                         <Box>
                             <Typography sx={{ mb: 2 }} variant="h6" color="#19d3ae">Appoinment</Typography>
                             <Typography sx={{ mb: 2, color: "white" }} variant="h4">Make an appoinment today</Typography>
