@@ -10,10 +10,10 @@ const stripePromise = loadStripe('pk_test_51PcXO42NhzexdETyIiGMgwwjLyINjNy2lrPZy
 function Payment() {
     const { appointmentId } = useParams();
     const [appointment, setAppointment] = useState({});
-    const { patientName, patientEmail, patientPhone, serviceName, slot, date, cost } = appointment;
+    const { patientName, patientEmail, serviceName, slot, date, cost } = appointment;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/appointments/${appointmentId}`)
+        fetch(`https://doctors-portal-server-wg85.onrender.com/appointments/${appointmentId}`)
             .then(response => response.json())
             .then(data => {
                 setAppointment(data);

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { CircularProgress, Typography } from '@mui/material';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import React, { useEffect, useState } from 'react'
@@ -13,7 +14,7 @@ function CheckoutForm({ appointment }) {
     const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/create-payment-intent`, {
+        fetch(`https://doctors-portal-server-wg85.onrender.com/create-payment-intent`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -87,7 +88,7 @@ function CheckoutForm({ appointment }) {
             }
 
             // save to DB
-            fetch(`http://localhost:5000/appointments/${_id}`, {
+            fetch(`https://doctors-portal-server-wg85.onrender.com/appointments/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',
