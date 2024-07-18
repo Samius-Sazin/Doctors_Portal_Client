@@ -18,7 +18,7 @@ const style = {
 
 
 function AppoinmentModal({ open, booking, handleBookAppoinmentButtonClose, date, setAppointmentStatus }) {
-    const { name, time } = booking;
+    const { name, time, cost } = booking;
     const { user } = useAuth();
 
     const [openLoading, setOpenLoading] = React.useState(false);
@@ -36,6 +36,7 @@ function AppoinmentModal({ open, booking, handleBookAppoinmentButtonClose, date,
     }
     const [appoinmentInfo, setAppoinmentInfo] = useState(initialAppointmentInfo);
 
+    //only for name, phone
     const handleOnBlur = e => {
         const name = e.target.name;
         const value = e.target.value;
@@ -54,6 +55,7 @@ function AppoinmentModal({ open, booking, handleBookAppoinmentButtonClose, date,
             serviceName: name,
             slot: time,
             date: date?.toLocaleDateString(),
+            cost: cost
         }
 
         fetch('https://doctors-portal-server-wg85.onrender.com/appointments', {
@@ -89,7 +91,7 @@ function AppoinmentModal({ open, booking, handleBookAppoinmentButtonClose, date,
             >
                 <Box sx={style}>
                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                        <Typography id="modal-modal-title" variant="h6" component="h2" sx={{ color: "#19d3ae", fontWeight: "600" }}> {name} </Typography>
+                        <Typography id="modal-modal-title" variant="h6" component="h2" sx={{ color: "#19d3ae", fontWeight: "600" }}> {name} - ${cost} </Typography>
                         <CloseIcon onClick={handleBookAppoinmentButtonClose} sx={{ cursor: "pointer", backgroundColor: "#e6e6e6", p: 1, borderRadius: "100%", ":hover": { backgroundColor: "gray" } }} />
                     </Box>
                     <form onSubmit={handleSubmit}>

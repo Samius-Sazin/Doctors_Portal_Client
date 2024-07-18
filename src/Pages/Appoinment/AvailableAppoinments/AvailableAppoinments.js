@@ -9,31 +9,37 @@ function AvailableAppoinments({ date }) {
             name: "Teeth Orthodontics",
             time: "8:00 AM - 9:00 AM",
             availableSpace: "10 spaces available",
+            cost: 99,
         },
         {
             name: "Cosmetic Dentistry",
             time: "8:00 AM - 9:00 AM",
             availableSpace: "10 spaces available",
+            cost: 199,
         },
         {
             name: "Teeth Cleaning",
             time: "8:00 AM - 9:00 AM",
             availableSpace: "10 spaces available",
+            cost: 499,
         },
         {
             name: "Teeth Orthodonticss",
             time: "8:00 AM - 9:00 AM",
             availableSpace: "10 spaces available",
+            cost: 399,
         },
         {
             name: "Teeth Orthodontic",
             time: "8:00 AM - 9:00 AM",
             availableSpace: "10 spaces available",
+            cost: 299,
         },
         {
             name: "Teeth Orthodonticsx",
             time: "8:00 AM - 9:00 AM",
             availableSpace: "10 spaces available",
+            cost: 199,
         }
     ]
 

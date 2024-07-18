@@ -9,7 +9,7 @@ function Docotrs() {
         fetch('https://doctors-portal-server-wg85.onrender.com/doctors')
             .then(response => response.json())
             .then(data => {
-                setDoctors(data); console.log(data);
+                setDoctors(data);
             })
     }, [])
 

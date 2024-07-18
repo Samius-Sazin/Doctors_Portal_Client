@@ -22,6 +22,7 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../Hooks/useAuth';
 import AddDoctor from '../AddDoctor/AddDoctor';
 import AuthMiddlewareDashboard from '../../../Middleware/AuthMiddleware/AuthMiddlewareDashboard';
+import Payment from '../Payment/Payment';
 
 const drawerWidth = 200;
 
@@ -137,6 +138,7 @@ function Dashboard(props) {
                             <Route path='/make-admin' element={<MakeAdmin />} />
                             <Route path='/add-doctor' element={<AddDoctor />} />
                         </Route>
+                        <Route path='/payment/:appointmentId' element={<Payment />} />
                     </Routes>
                     <Outlet />
                 </Box>

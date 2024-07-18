@@ -7,15 +7,15 @@ function DashboardHome({ appointmentDate, setAppointmentDate }) {
   
   return (
     <Box>
-      <Grid container spacing={{ xs: 3, sm: 3, md: 0 }}>
-        <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Grid container rowSpacing={{ xs: 3, sm: 3, md: 0 }}>
+        <Grid item xs={12} sm={12} md={3.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Paper sx={{ height: "336px" }}>
             <Calender date={appointmentDate} setDate={setAppointmentDate} />
           </Paper>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Paper sx={{ p: 3 }}>
+        <Grid item xs={12} sm={12} md={8.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Paper sx={{ p: 3, width:"100%" }}>
             <Appoinments appointmentDate={appointmentDate} />
           </Paper>
         </Grid>
